@@ -1,0 +1,393 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 15 Pro Max",
+    "image": "https://m.media-amazon.com/images/I/41MfxfZnEDL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 1299,
+    "description": "The ultimate smartphone experience.",
+    "specification": [
+      "A17 Bionic chip",
+      "6.7-inch ProMotion display",
+      "triple-camera system"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "title": "Samsung Galaxy S24 Ultra",
+    "image": "https://m.media-amazon.com/images/I/71WcjsOVOmL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 1199,
+    "description": "The future of Android.",
+    "specification": [
+      "Snapdragon 8 Gen 3",
+      "6.8-inch Dynamic AMOLED 2X display",
+      "quad-camera system"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "title": "Sony WH-1000XM5",
+    "image": "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 399,
+    "description": "Industry-leading noise cancellation.",
+    "specification": [
+      "High-resolution audio",
+      "adaptive sound control",
+      "touch controls"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": 4,
+    "title": "Apple AirPods Pro (2nd Gen)",
+    "image": "https://m.media-amazon.com/images/I/419yjKznzbL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 249,
+    "description": ["Immersive sound", "personalized experience."],
+    "specification": "Active Noise Cancellation, Adaptive EQ, Spatial Audio",
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 5,
+    "title": "Logitech MX Keys Mini",
+    "image": "https://m.media-amazon.com/images/I/71lsfH+ww3L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 99,
+    "description": "Compact and efficient keyboard.",
+    "specification": [
+      "Perfect Stroke keys",
+      "backlit keys",
+      "multi-device connectivity"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": 6,
+    "title": "Keychron K8 Pro",
+    "image": "https://m.media-amazon.com/images/I/61XULBEea2L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 149,
+    "description": "Versatile mechanical keyboard.",
+    "specification": [
+      "Hot-swappable keys",
+      "wireless connectivity",
+      "RGB backlighting"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "title": "Intel Core i9-14900K",
+    "image": "https://m.media-amazon.com/images/I/61GbKtxb57L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 589,
+    "description": "Ultimate gaming and content creation processor.",
+    "specification": ["16 cores", "24 threads", "Raptor Lake architecture"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": 8,
+    "title": "NVIDIA GeForce RTX 4090 Ti",
+    "image": "https://m.media-amazon.com/images/I/81-Q4kEcj5L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 1999,
+    "description": "The most powerful gaming GPU ever.",
+    "specification": [
+      "24GB GDDR6X memory",
+      "Ada Lovelace architecture",
+      "DLSS 3"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "title": "Apple MacBook Pro 14-inch (M2 Pro)",
+    "image": "https://m.media-amazon.com/images/I/61HUaSA6c0L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "Powerful and portable.",
+    "specification": [
+      "M2 Pro chip",
+      "Liquid Retina XDR display",
+      "1080p FaceTime HD camera"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": 10,
+    "title": "Dell XPS 13 Plus (2023)",
+    "image": "https://m.media-amazon.com/images/I/61jXnz-S-JL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Laptops",
+    "price": 1299,
+    "description": "Ultra-sleek and powerful.",
+    "specification": [
+      "13th Gen Intel Core processor",
+      "OLED display",
+      "haptic touchpad"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 11,
+    "title": "Samsung Galaxy Z Fold 5",
+    "image": "https://m.media-amazon.com/images/I/61f3V3m9xnL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 1799,
+    "description": "The ultimate foldable phone.",
+    "specification": [
+      "Snapdragon 8 Gen 2",
+      "7.6-inch Dynamic AMOLED 2X display",
+      "triple-camera system"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 12,
+    "title": "Google Pixel 8 Pro",
+    "image": "https://m.media-amazon.com/images/I/71SfoZu9a3L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 999,
+    "description": "The best camera phone.",
+    "specification": [
+      "Google Tensor G2",
+      "6.7-inch Smooth Display",
+      "48MP main camera"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 13,
+    "title": "Bose QuietComfort 45",
+    "image": "https://m.media-amazon.com/images/I/51NC9ErIQtL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 329,
+    "description": "Legendary noise cancellation.",
+    "specification": [
+      "Active EQ",
+      "TriPort acoustic architecture",
+      "up to 24 hours of battery life"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 14,
+    "title": "Sennheiser Momentum 4 Wireless",
+    "image": "https://m.media-amazon.com/images/I/716++4xC2wL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 349,
+    "description": "Premium sound, all-day comfort.",
+    "specification": [
+      "Adaptive Noise Cancellation",
+      "Adaptive Sound Zone",
+      "60 hours of battery life"
+    ],
+    "availability": false
+  },
+  {
+    "id": 16,
+    "title": "Keychron K10",
+    "image": "https://m.media-amazon.com/images/I/61J1eiXwYFL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 199,
+    "description": "Full-size mechanical keyboard.",
+    "specification": [
+      "Hot-swappable keys",
+      "wireless connectivity",
+      "RGB backlighting"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 17,
+    "title": "Ducky One 3 SF",
+    "image": "https://m.media-amazon.com/images/I/51BOyjV7EUL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 139,
+    "description": "Compact mechanical keyboard.",
+    "specification": ["PBT keycaps", "Cherry MX switches", "RGB backlighting"],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 18,
+    "title": "AMD Ryzen 9 7950X3D",
+    "image": "https://m.media-amazon.com/images/I/5116zdA9uyL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 699,
+    "description": "Gaming and content creation powerhouse.",
+    "specification": ["16 cores", "32 threads", "3D V-Cache technology"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": 19,
+    "title": "NVIDIA GeForce RTX 4080",
+    "image": "https://m.media-amazon.com/images/I/71HkcijObxL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 1199,
+    "description": "High-performance gaming GPU.",
+    "specification": [
+      "16GB GDDR6X memory",
+      "Ada Lovelace architecture",
+      "DLSS 3"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "id": 20,
+    "title": "Apple MacBook Air (M2)",
+    "image": "https://m.media-amazon.com/images/I/61HUaSA6c0L._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Laptops",
+    "price": 999,
+    "description": "Thin, light, and powerful.",
+    "specification": ["M2 chip", "Liquid Retina display", "MagSafe charging"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": 21,
+    "title": "ASUS ROG Zephyrus G16",
+    "image": "https://m.media-amazon.com/images/I/81GrCeuCzxL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "High-performance gaming laptop.",
+    "specification": [
+      "13th Gen Intel Core processor",
+      "NVIDIA GeForce RTX 40 Series GPU",
+      "16-inch Mini LED display"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "id": 22,
+    "title": "Google Pixel Fold",
+    "image": "https://m.media-amazon.com/images/I/71VfMpqMzdL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 1799,
+    "description": "Google's first foldable phone.",
+    "specification": [
+      "Google Tensor G2",
+      "7.6-inch foldable OLED display",
+      "triple-camera system"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": 23,
+    "title": "OnePlus 11",
+    "image": "https://m.media-amazon.com/images/I/71xMs88FYbL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Mobiles",
+    "price": 799,
+    "description": "Flagship performance at an affordable price.",
+    "specification": [
+      "Snapdragon 8 Gen 2",
+      "6.7-inch Fluid AMOLED display",
+      "triple-camera system"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 24,
+    "title": "Sennheiser Momentum True Wireless 3",
+    "image": "https://m.media-amazon.com/images/I/6165ykR16dL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 249,
+    "description": "Premium true wireless earbuds.",
+    "specification": [
+      "Adaptive Noise Cancellation",
+      "Adaptive Sound Zone",
+      "7-hour battery life"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 25,
+    "title": "Jabra Elite 85t",
+    "image": "https://m.media-amazon.com/images/I/51YF4pj9EOL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Headphones",
+    "price": 229,
+    "description": "Advanced ANC and HearThrough.",
+    "specification": [
+      "Active Noise Cancellation",
+      "HearThrough",
+      "32-hour battery life"
+    ],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "id": 26,
+    "title": "Keychron K6",
+    "image": "https://m.media-amazon.com/images/I/61VC6EoVrKS._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 99,
+    "description": "Compact 65% mechanical keyboard.",
+    "specification": [
+      "Hot-swappable keys",
+      "wireless connectivity",
+      "RGB backlighting"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": 27,
+    "title": "Ducky One 3 Mini",
+    "image": "https://m.media-amazon.com/images/I/71jZDOe+5UL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Keyboards",
+    "price": 119,
+    "description": "Compact 60% mechanical keyboard.",
+    "specification": ["PBT keycaps", "Cherry MX switches", "RGB backlighting"],
+    "availability": false,
+    "rating": 4.6
+  },
+  {
+    "id": 28,
+    "title": "AMD Ryzen 7 7700X",
+    "image": "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 399,
+    "description": "High-performance mainstream processor.",
+    "specification": ["8 cores", "16 threads", "Zen 4 architecture"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": 29,
+    "title": "NVIDIA GeForce RTX 4070 Ti",
+    "image": "https://m.media-amazon.com/images/I/81uhZBIiSYL._AC_UY327_FMwebp_QL65_.jpg",
+    "category": "Desktop Components",
+    "price": 799,
+    "description": "Powerful gaming GPU for 1440p gaming.",
+    "specification": [
+      "12GB GDDR6X memory",
+      "Ada Lovelace architecture",
+      "DLSS 3"
+    ],
+    "availability": false,
+    "rating": 4.7
+  }
+]
