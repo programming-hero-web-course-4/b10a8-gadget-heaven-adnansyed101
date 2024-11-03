@@ -2,7 +2,7 @@ import bannerImg from "../assets/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className="hero bg-[#9538E2] container mx-auto rounded-b-lg text-white relative pb-52 mb-20">
+    <div className="hero bg-primary container mx-auto rounded-b-lg text-white relative pb-52 mb-60">
       <div className="hero-content text-center">
         <div className="max-w-5xl">
           <h1 className="text-5xl font-bold">
@@ -13,7 +13,7 @@ const Banner = () => {
             next level. From smart devices to the coolest accessories, we have
             it all!
           </p>
-          <button className="btn bg-white text-[#9538E2] rounded-full">
+          <button className="btn bg-white text-primary rounded-full">
             Shop Now
           </button>
         </div>
