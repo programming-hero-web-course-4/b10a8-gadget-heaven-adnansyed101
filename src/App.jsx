@@ -1,8 +1,12 @@
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <Banner></Banner>
+    </>
   );
 };
 
