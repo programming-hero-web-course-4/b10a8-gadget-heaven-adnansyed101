@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import ReactStars from "react-rating-stars-component";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -50,9 +51,16 @@ const ProductDetail = () => {
           <p className="flex items-center gap-1 font-bold">
             Rating <FaStar />
           </p>
-          <p>
-            Some Rating <span className="badge badge-ghost">{rating}</span>
-          </p>
+          <div className="flex items-center gap-4">
+            <ReactStars
+              count={5}
+              isHalf
+              value={rating}
+              size={24}
+              activeColor="#ffd700"
+            />
+            <span className="badge badge-ghost">{rating}</span>
+          </div>
           <div className="space-x-2">
             <button className="btn rounded-full bg-primary text-white">
               Add To Cart <MdOutlineShoppingCart />
