@@ -3,7 +3,7 @@ import bannerImg from "../assets/banner.jpg";
 const Banner = () => {
   return (
     <div className="flex flex-col items-center container mx-auto text-white mb-10 text-center">
-      <div className="bg-primary pt-10 pb-36 rounded-b-lg">
+      <div className="bg-primary pt-10 pb-48 rounded-b-lg">
         <h1 className="text-5xl font-bold">
           Upgrade Your Tech Accessorize with Gadget Heaven Accessories
         </h1>
@@ -15,7 +15,7 @@ const Banner = () => {
           Shop Now
         </button>
       </div>
-      <figure className="w-2/4 outline outline-offset-8 rounded-lg -mt-32">
+      <figure className="w-3/5 outline outline-offset-8 rounded-lg -mt-44">
         <img src={bannerImg} alt="Apple Vision" className="rounded-lg" />
       </figure>
     </div>
