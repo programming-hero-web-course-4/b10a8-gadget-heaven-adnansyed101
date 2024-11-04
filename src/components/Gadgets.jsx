@@ -1,21 +1,9 @@
-import { useEffect, useState } from "react";
 import Card from "./Card";
+import { useOutletContext } from "react-router-dom";
 
 const Gadgets = () => {
-  const [techs, setTechs] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All Products");
-
-  useEffect(() => {
-    fetch("./tech.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (selectedCategory === "All Products") {
-          setTechs(data);
-        } else {
-          setTechs(data.filter((tech) => tech.category === selectedCategory));
-        }
-      });
-  }, [selectedCategory]);
+  const { techs, selectedCategory, handleSelectedCategory } =
+    useOutletContext();
 
   const categories = [
     "All Products",
@@ -25,10 +13,6 @@ const Gadgets = () => {
     "PC Components",
     "Laptops",
   ];
-
-  const handleSelectedCategory = (category) => {
-    setSelectedCategory(category);
-  };
 
   return (
     <section className="mb-10">
