@@ -1,6 +1,6 @@
 import { CiMenuFries, CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -8,16 +8,16 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a>Statistics</a>
+        <Link to="/statistics">Statistics</Link>
       </li>
       <li>
-        <a>Dashboard</a>
+        <Link to="/dashboard">Dashboard</Link>
       </li>
       <li>
-        <a>Blogs</a>
+        <Link to="/blogs">Blogs</Link>
       </li>
     </>
   );
