@@ -36,7 +36,7 @@ const Gadgets = () => {
         Explore Cutting-Edge Gadgets
       </h4>
       <div className="container mx-auto flex gap-4">
-        <div className="p-4 bg-base-200 self-start w-1/5 rounded-lg">
+        <div className="p-4 bg-base-200 self-start sticky top-10 w-1/5 rounded-lg">
           {categories.map((category) => (
             <p
               key={category}
