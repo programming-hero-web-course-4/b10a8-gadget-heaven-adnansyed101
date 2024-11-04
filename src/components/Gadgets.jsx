@@ -31,7 +31,7 @@ const Gadgets = () => {
   };
 
   return (
-    <section>
+    <section className="mb-10">
       <h4 className="text-center text-3xl font-bold mb-10">
         Explore Cutting-Edge Gadgets
       </h4>
@@ -41,7 +41,9 @@ const Gadgets = () => {
             <p
               key={category}
               className={`${
-                category === selectedCategory ? "bg-primary text-white" : "bg-white text-black"
+                category === selectedCategory
+                  ? "bg-primary text-white"
+                  : "bg-white text-black"
               } rounded-full p-4 mb-2`}
               onClick={() => handleSelectedCategory(category)}
             >
