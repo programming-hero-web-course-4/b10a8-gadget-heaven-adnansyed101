@@ -50,8 +50,8 @@
     "image": "https://m.media-amazon.com/images/I/419yjKznzbL._AC_UY327_FMwebp_QL65_.jpg",
     "category": "Headphones",
     "price": 249,
-    "description": ["Immersive sound", "personalized experience."],
-    "specification": "Active Noise Cancellation, Adaptive EQ, Spatial Audio",
+    "description": "Immersive sound, personalized experience.",
+    "specification": ["Active Noise Cancellation", "Adaptive EQ", "Spatial Audio"],
     "availability": false,
     "rating": 4.7
   },
