@@ -1,26 +1,32 @@
 import { CiMenuFries, CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
-
-const links = (
-  <>
-    <li>
-      <a>Home</a>
-    </li>
-    <li>
-      <a>Statistics</a>
-    </li>
-    <li>
-      <a>Dashboard</a>
-    </li>
-    <li>
-      <a>Blogs</a>
-    </li>
-  </>
-);
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const links = (
+    <>
+      <li>
+        <a>Home</a>
+      </li>
+      <li>
+        <a>Statistics</a>
+      </li>
+      <li>
+        <a>Dashboard</a>
+      </li>
+      <li>
+        <a>Blogs</a>
+      </li>
+    </>
+  );
   return (
-    <div className="navbar container mx-auto bg-primary mt-2 text-white rounded-t-lg">
+    <div
+      className={`navbar container mx-auto mt-2 rounded-t-lg ${
+        location.pathname === "/" ? "bg-primary text-white" : "text-black"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
