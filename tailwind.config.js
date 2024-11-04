@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#9538E2",
+        primaryText: "rgba(9,8,15,.6)",
       },
     },
   },
