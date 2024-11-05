@@ -7,6 +7,7 @@ const App = () => {
   const [techs, setTechs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All Products");
   const [selectedTechs, setSelectedTechs] = useState([]);
+  const [wishlist, setWishList] = useState([]);
 
   useEffect(() => {
     fetch("/tech.json")
@@ -28,6 +29,10 @@ const App = () => {
     setSelectedTechs((prev) => [...prev, tech]);
   };
 
+  const handleWishList = (tech) => {
+    setWishList((prev) => [...prev, tech]);
+  };
+
   return (
     <>
       <Navbar></Navbar>
@@ -36,8 +41,10 @@ const App = () => {
           techs,
           selectedCategory,
           selectedTechs,
+          wishlist,
           handleSelectedCategory,
           handleSelectedTechs,
+          handleWishList,
         }}
       ></Outlet>
       <Footer></Footer>
