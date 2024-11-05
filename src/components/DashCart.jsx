@@ -3,12 +3,8 @@ import { GiSettingsKnobs } from "react-icons/gi";
 import { useOutletContext } from "react-router-dom";
 
 const DashCart = () => {
-  const { selectedTechs, handleSort } = useOutletContext();
-
-  const totalAmount = selectedTechs.reduce(
-    (total, tech) => total + tech.price,
-    0
-  );
+  const { selectedTechs, handleSort, handlePurchaseBtn, totalAmount } =
+    useOutletContext();
 
   return (
     <>
@@ -23,6 +19,7 @@ const DashCart = () => {
         </button>
         <button
           className="btn btn-outline rounded-full bg-primary text-white font-semibold text-xl"
+          onClick={handlePurchaseBtn}
         >
           Purchase
         </button>
