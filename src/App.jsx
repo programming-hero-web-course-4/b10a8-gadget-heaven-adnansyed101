@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [techs, setTechs] = useState([]);
@@ -11,6 +12,12 @@ const App = () => {
   const [selectedTechs, setSelectedTechs] = useState([]);
   const [wishlist, setWishList] = useState([]);
   const [tab, setTab] = useState("cart");
+  const [showModal, setShowModal] = useState(false);
+
+  const totalAmount = selectedTechs.reduce(
+    (total, tech) => (total = total + tech.price),
+    0
+  );
 
   useEffect(() => {
     fetch("/tech.json")
@@ -47,13 +54,28 @@ const App = () => {
   };
 
   const handleRemove = (id) => {
-    toast.error('Product has been deleted')
+    toast.error("Product has been deleted");
     setSelectedTechs((prev) => prev.filter((tech) => tech.id !== id));
+  };
+
+  const handlePurchaseBtn = () => {
+    if (selectedTechs.length > 0) {
+      setShowModal(true);
+      setSelectedTechs([]);
+    } else {
+      toast.warn("Add items to cart");
+      return;
+    }
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
   };
 
   return (
     <>
       <Navbar handleSelectedTab={handleSelectedTab}></Navbar>
+      <Modal visible={showModal} onClose={handleClose}></Modal>
       <Outlet
         context={{
           techs,
@@ -61,15 +83,18 @@ const App = () => {
           selectedTechs,
           wishlist,
           tab,
+          totalAmount,
           handleSelectedCategory,
           handleSelectedTechs,
           handleWishList,
           handleSelectedTab,
           handleSort,
           handleRemove,
+          handlePurchaseBtn,
         }}
       ></Outlet>
       <ToastContainer />
+
       <Footer></Footer>
     </>
   );
