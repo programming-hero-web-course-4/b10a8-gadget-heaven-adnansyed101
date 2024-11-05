@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard.jsx";
 import Blogs from "./components/Blogs.jsx";
 import BlogDetails from "./components/BlogDetails.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
+import Stats from "./components/Stats.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/statistics",
-        element: <h2>No data to show</h2>,
+        element: <Stats></Stats>,
       },
     ],
   },
