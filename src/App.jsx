@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [techs, setTechs] = useState([]);
@@ -27,15 +29,26 @@ const App = () => {
   };
 
   const handleSelectedTechs = (tech) => {
+    toast.success("Product added to cart");
     setSelectedTechs((prev) => [...prev, tech]);
   };
 
   const handleWishList = (tech) => {
+    toast.success("Product added to wishlist.");
     setWishList((prev) => [...prev, tech]);
   };
 
   const handleSelectedTab = (tab) => {
     setTab(tab);
+  };
+
+  const handleSort = () => {
+    setSelectedTechs((prev) => [...prev].sort((a, b) => b.price - a.price));
+  };
+
+  const handleRemove = (id) => {
+    toast.error('Product has been deleted')
+    setSelectedTechs((prev) => prev.filter((tech) => tech.id !== id));
   };
 
   return (
@@ -52,8 +65,11 @@ const App = () => {
           handleSelectedTechs,
           handleWishList,
           handleSelectedTab,
+          handleSort,
+          handleRemove,
         }}
       ></Outlet>
+      <ToastContainer />
       <Footer></Footer>
     </>
   );
