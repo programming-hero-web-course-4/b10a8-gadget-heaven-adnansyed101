@@ -7,6 +7,8 @@ import ProductDetail from "./components/ProductDetail.jsx";
 import Banner from "./components/Banner.jsx";
 import Gadgets from "./components/Gadgets.jsx";
 import Dashboard from "./components/Dashboard.jsx";
+import Blogs from "./components/Blogs.jsx";
+import BlogDetails from "./components/BlogDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,22 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+    ],
+  },
+  {
+    path: "/blogs",
+    element: <App></App>,
+    children: [
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+        loader: () => fetch("/blogs.json"),
+      },
+      {
+        path: "/blogs/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: () => fetch("/blogs.json"),
       },
     ],
   },
