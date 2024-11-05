@@ -9,11 +9,13 @@ import Gadgets from "./components/Gadgets.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Blogs from "./components/Blogs.jsx";
 import BlogDetails from "./components/BlogDetails.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
