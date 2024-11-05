@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import { IoMdClose } from "react-icons/io";
+import { useOutletContext } from "react-router-dom";
 
 const DashCard = ({ tech }) => {
-  const { image, title, description, price } = tech;
+  const { handleRemove } = useOutletContext();
+  const { id, image, title, description, price } = tech;
 
   return (
     <div className="flex bg-base-200 shadow-xl p-4 mb-4 rounded-lg">
@@ -15,7 +17,12 @@ const DashCard = ({ tech }) => {
         <p className="font-semibold">Price: ${price}</p>
       </div>
       <div className="card-actions items-start">
-        <button className="btn btn-outline btn-error btn-circle"><IoMdClose /></button>
+        <button
+          className="btn btn-outline btn-error btn-circle"
+          onClick={() => handleRemove(id)}
+        >
+          <IoMdClose />
+        </button>
       </div>
     </div>
   );
