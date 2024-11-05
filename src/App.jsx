@@ -8,6 +8,7 @@ const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Products");
   const [selectedTechs, setSelectedTechs] = useState([]);
   const [wishlist, setWishList] = useState([]);
+  const [tab, setTab] = useState("cart");
 
   useEffect(() => {
     fetch("/tech.json")
@@ -33,18 +34,24 @@ const App = () => {
     setWishList((prev) => [...prev, tech]);
   };
 
+  const handleSelectedTab = (tab) => {
+    setTab(tab);
+  };
+
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar handleSelectedTab={handleSelectedTab}></Navbar>
       <Outlet
         context={{
           techs,
           selectedCategory,
           selectedTechs,
           wishlist,
+          tab,
           handleSelectedCategory,
           handleSelectedTechs,
           handleWishList,
+          handleSelectedTab,
         }}
       ></Outlet>
       <Footer></Footer>
