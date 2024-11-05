@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -7,6 +7,7 @@ import ReactStars from "react-rating-stars-component";
 const ProductDetail = () => {
   const { id } = useParams();
   const allTechs = useLoaderData();
+  const { handleSelectedTechs } = useOutletContext();
   const currentTech = allTechs.find((tech) => tech.id === parseInt(id));
   const {
     image,
@@ -17,8 +18,6 @@ const ProductDetail = () => {
     rating,
     availability,
   } = currentTech;
-
-  console.log(currentTech);
 
   return (
     <div className="flex flex-col items-center mb-10 ">
@@ -54,7 +53,7 @@ const ProductDetail = () => {
           <div className="flex items-center gap-4">
             <ReactStars
               count={5}
-              isHalf
+              isHalf={true}
               value={rating}
               size={24}
               activeColor="#ffd700"
@@ -62,7 +61,10 @@ const ProductDetail = () => {
             <span className="badge badge-ghost">{rating}</span>
           </div>
           <div className="space-x-2">
-            <button className="btn rounded-full bg-primary text-white">
+            <button
+              className="btn rounded-full bg-primary text-white"
+              onClick={() => handleSelectedTechs(currentTech)}
+            >
               Add To Cart <MdOutlineShoppingCart />
             </button>
             <button className="btn btn-circle bg-white">
