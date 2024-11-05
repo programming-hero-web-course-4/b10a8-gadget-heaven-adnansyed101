@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 const App = () => {
   const [techs, setTechs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All Products");
+  const [selectedTechs, setSelectedTechs] = useState([]);
 
   useEffect(() => {
     fetch("/tech.json")
@@ -23,11 +24,21 @@ const App = () => {
     setSelectedCategory(category);
   };
 
+  const handleSelectedTechs = (tech) => {
+    setSelectedTechs((prev) => [...prev, tech]);
+  };
+
   return (
     <>
       <Navbar></Navbar>
       <Outlet
-        context={{ techs, selectedCategory, handleSelectedCategory }}
+        context={{
+          techs,
+          selectedCategory,
+          selectedTechs,
+          handleSelectedCategory,
+          handleSelectedTechs,
+        }}
       ></Outlet>
       <Footer></Footer>
     </>
