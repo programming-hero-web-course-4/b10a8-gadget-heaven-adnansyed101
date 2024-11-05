@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,6 +13,7 @@ const App = () => {
   const [wishlist, setWishList] = useState([]);
   const [tab, setTab] = useState("cart");
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const totalAmount = selectedTechs.reduce(
     (total, tech) => (total = total + tech.price),
@@ -30,6 +31,8 @@ const App = () => {
         }
       });
   }, [selectedCategory]);
+
+  
 
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category);
@@ -70,6 +73,7 @@ const App = () => {
 
   const handleClose = () => {
     setShowModal(false);
+    navigate("/");
   };
 
   return (
