@@ -25,8 +25,8 @@ const DashCart = () => {
         </button>
       </div>
       <div className="container mx-auto">
-        {selectedTechs.map((tech) => (
-          <DashCard key={tech.id} tech={tech}></DashCard>
+        {selectedTechs.map((tech, index) => (
+          <DashCard key={index} tech={tech}></DashCard>
         ))}
       </div>
     </>
