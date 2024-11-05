@@ -1,23 +1,24 @@
+import PropTypes from "prop-types";
 import { CiMenuFries, CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ handleSelectedTab }) => {
   const location = useLocation();
 
   const links = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Link to="/statistics">Statistics</Link>
+        <NavLink to="/statistics">Statistics</NavLink>
       </li>
       <li>
-        <Link to="/dashboard">Dashboard</Link>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
       <li>
-        <Link to="/blogs">Blogs</Link>
+        <NavLink to="/blogs">Blogs</NavLink>
       </li>
     </>
   );
@@ -42,18 +43,30 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
       </div>
       <div className="navbar-end space-x-2">
-        <button className="btn btn-sm btn-circle bg-white">
+        <Link
+          to="/dashboard"
+          className="btn btn-sm btn-circle bg-white"
+          onClick={() => handleSelectedTab("cart")}
+        >
           <MdOutlineShoppingCart />
-        </button>
-        <button className="btn btn-sm btn-circle bg-white">
+        </Link>
+        <Link
+          to="/dashboard"
+          className="btn btn-sm btn-circle bg-white"
+          onClick={() => handleSelectedTab("wishlist")}
+        >
           <CiHeart />
-        </button>
+        </Link>
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  handleSelectedTab: PropTypes.func,
 };
 
 export default Navbar;
