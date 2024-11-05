@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import DashCart from "./DashCart";
 import DashWish from "./DashWish";
 import { useOutletContext } from "react-router-dom";
 
 const Dashboard = () => {
   const { tab, handleSelectedTab } = useOutletContext();
+
+  useEffect(() => {
+    document.title = "Dashboard | Gadget Heaven";
+  }, []);
 
   return (
     <section className="mb-10">

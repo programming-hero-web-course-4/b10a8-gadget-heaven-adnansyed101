@@ -1,8 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import BlogsCard from "./BlogsCard";
+import { useEffect } from "react";
 
 const Blogs = () => {
   const blogs = useLoaderData();
+
+  useEffect(() => {
+    document.title = "Blogs | Gadget Heaven";
+  }, []);
 
   return (
     <section className="mb-10">

@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import Card from "./Card";
 import { useOutletContext } from "react-router-dom";
 
 const Gadgets = () => {
   const { techs, selectedCategory, handleSelectedCategory } =
     useOutletContext();
+
+  useEffect(() => {
+    document.title = "Home | Gadget Heaven";
+  }, []);
 
   const categories = [
     "All Products",

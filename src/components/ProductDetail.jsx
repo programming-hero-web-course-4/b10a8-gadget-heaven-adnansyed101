@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import ReactStars from "react-rating-stars-component";
+import { useEffect } from "react";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -18,6 +19,10 @@ const ProductDetail = () => {
     rating,
     availability,
   } = currentTech;
+
+  useEffect(() => {
+    document.title = "Details | Gadget Heaven";
+  }, []);
 
   return (
     <div className="flex flex-col items-center mb-10 ">

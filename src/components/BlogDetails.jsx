@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const BlogDetails = () => {
   const { id } = useParams();
   const blogs = useLoaderData();
   const currentBlog = blogs.find((blog) => blog.id === parseInt(id));
+
+  useEffect(() => {
+    document.title = "Details | Gadget Heaven";
+  }, []);
 
   return (
     <div className="hero min-h-96">
