@@ -7,7 +7,7 @@ import ReactStars from "react-rating-stars-component";
 const ProductDetail = () => {
   const { id } = useParams();
   const allTechs = useLoaderData();
-  const { handleSelectedTechs } = useOutletContext();
+  const { handleSelectedTechs, handleWishList } = useOutletContext();
   const currentTech = allTechs.find((tech) => tech.id === parseInt(id));
   const {
     image,
@@ -67,7 +67,10 @@ const ProductDetail = () => {
             >
               Add To Cart <MdOutlineShoppingCart />
             </button>
-            <button className="btn btn-circle bg-white">
+            <button
+              className="btn btn-circle bg-white"
+              onClick={() => handleWishList(currentTech)}
+            >
               <CiHeart />
             </button>
           </div>
