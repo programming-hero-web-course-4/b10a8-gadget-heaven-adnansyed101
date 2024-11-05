@@ -7,7 +7,7 @@ const BlogsCard = ({ blog }) => {
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>{author}</p>
+        <p className="text-primaryText">Author: {author}</p>
         <div className="card-actions justify-end">
           <Link to={`/blogs/${id}`} className="btn bg-primary text-white">
             View Details
